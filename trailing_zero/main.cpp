@@ -6,18 +6,25 @@ using namespace std;
 
 int find_trail(int n){
 
-    if(n == 0){
-        return 1;
-    }
-    int fact = 1;
-    int res = 0;
-    for(int i=2; i<=n; i++){
-        fact = fact * i;
-    }
+    // if(n == 0){
+    //     return 1;
+    // }
+    // int fact = 1;
+    // int res = 0;
+    // for(int i=2; i<=n; i++){
+    //     fact = fact * i;
+    // }
 
-    while(fact%10==0){
-        res++;
-        fact = fact/10;
+    // while(fact%10==0){
+    //     res++;
+    //     fact = fact/10;
+    // }
+    // return res;
+
+    // Efficient and less time complexity 
+    int res = 0;
+    for(int i=5; i<n; i=i*5){
+        res = res + n/i;  
     }
     return res;
 }
