@@ -21,29 +21,13 @@ int binary_search(int arr[], int x, int n){
         }
     }
     return -1;
-    /*
-        if(low>high){
-        return -1;
-        }
-        int mid= low+high/2;
-        if(arr[mid]==x){
-            return mid;
-        }
-        else if(arr[mid]>x){
-            binary_search(arr, low, mid-1, x)
-        }
-        else{
-            binary_search(arr, mid+1, low, x)
-        }
-    
-    */
 }
 
 int main(){
     int n = 6;
     int arr[] = {5, 10, 30, 50, 60, 70};
 
-    cout<<binary_search(arr, 20, n)<<endl;
+    cout<<binary_search(arr, 20, 5)<<endl;
 
     return 0;
 }
